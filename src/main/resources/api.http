@@ -1,0 +1,97 @@
+############################################cars
+GET http://localhost:8080/cars/get-all
+
+###
+GET http://localhost:8080/cars/get-by-id/2
+
+###
+POST http://localhost:8080/cars/create
+Content-Type: application/json
+
+{
+  "id": 0,
+  "brand": "Mers",
+  "model": "g63",
+  "year": 0,
+  "dailyPrice": 0
+}
+
+###
+PUT http://localhost:8080/cars/update/3
+Content-Type: application/json
+
+{
+  "id": 0,
+  "brand": "Porsche",
+  "model": "911",
+  "year": 0,
+  "dailyPrice": 0
+}
+
+###
+DELETE http://localhost:8080/cars/delete/3
+
+#############################################customer
+GET http://localhost:8080/customers/get-all
+
+###
+GET http://localhost:8080/customers/get-by-id/2
+
+###
+POST http://localhost:8080/customers/create
+Content-Type: application/json
+
+{
+  "id": 0,
+  "name": "Gargashmel",
+  "phone": "+998998745631236556"
+}
+
+###
+PUT http://localhost:8080/customers/update/3
+Content-Type: application/json
+
+{
+  "id": 0,
+  "name": "Odam",
+  "phone": "78456321454"
+}
+
+###
+DELETE http://localhost:8080/customers/delete/4
+
+
+##########################################################rentals
+GET http://localhost:8080/rentals/get-all
+
+###
+GET http://localhost:8080/rentals/get-by-id/{{id}}
+
+###
+POST http://localhost:8080/rentals/create
+Content-Type: application/json
+
+{
+  "id": 0,
+  "customerId": 3,
+  "carId": 7,
+  "startDate": "03-02-2025",
+  "endDate": "05-09-2025",
+  "totalPrice": 12345.44
+}
+
+###
+PUT http://localhost:8080/rentals/update/3
+Content-Type: application/json
+
+{
+  "id": 0,
+  "customerId": 4,
+  "carId": 3,
+  "startDate": "12-01-2025",
+  "endDate": "12-03-2025",
+  "totalPrice": 88654.12
+}
+
+###
+DELETE http://localhost:8080/rentals/delete/3
