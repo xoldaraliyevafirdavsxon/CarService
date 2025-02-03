@@ -1,6 +1,7 @@
 package com.company.car;
 
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -8,10 +9,11 @@ import java.util.List;
 
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/cars")
 public class CarController {
-    @Autowired
-    private CarService carService;
+//    @Autowired
+    private final CarService carService;
 
     @GetMapping("/get-all")
     public List <Car> getAll() {

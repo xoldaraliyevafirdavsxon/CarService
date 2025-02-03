@@ -1,15 +1,17 @@
 package com.company.rentals;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/rentals")
 public class RentalController {
-    @Autowired
-    private RentalService rentalService;
+//    @Autowired
+    private final RentalService rentalService;
 
     @GetMapping("/get-all")
     public List<Rentals> getAllCustomers() {
